@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Allotment</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; text-align: center; }
+        input, button { padding: 10px; margin: 10px; }
+        #result { font-weight: bold; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Room Allotment Checker</h1>
+    <input type="text" id="rollNumber" placeholder="Enter Roll Number" />
+    <button onclick="findRoom()">Check Room</button>
+    <div id="result"></div>
+
+    <script>
+        // Data: Replace this with dynamic data loading from a CSV
+        <script src="Testing.csv"></script>
+        ];
+
+        function findRoom() {
+            const rollNumber = document.getElementById('rollNumber').value.trim();
+            const result = data.find(item => item.roll === rollNumber);
+            const resultDiv = document.getElementById('result');
+            if (result) {
+                resultDiv.innerHTML = `Room Number: ${result.room}`;
+            } else {
+                resultDiv.innerHTML = "Roll number not found.";
+            }
+        }
+    </script>
+</body>
+</html>
